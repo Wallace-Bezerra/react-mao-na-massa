@@ -1,0 +1,22 @@
+.btn {
+  padding-block: 20px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  width: 100%;
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+  /* background-color: hsl(228, 12%, 48%); */
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.btn:hover {
+  background-color: #1a4031;
+}
+.btn img {
+  width: 20px;
+}

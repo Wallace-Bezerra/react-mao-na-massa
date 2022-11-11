@@ -1,0 +1,79 @@
+.card {
+  max-width: 800px;
+  height: 600px;
+  /* height: 100%; */
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.card-image {
+  border-start-start-radius: 15px;
+  border-end-start-radius: 15px;
+}
+.card-description {
+  padding: 40px;
+  background-color: white;
+  border-start-end-radius: 15px;
+  border-end-end-radius: 15px;
+}
+.card-category {
+  color: hsl(212, 21%, 14%);
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.card-title {
+  font-family: "Fraunces", serif;
+  font-size: 48px;
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+.card-text {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  color: hsl(212, 21%, 14%);
+  margin-bottom: 30px;
+}
+.card-price {
+  color: hsl(158, 36%, 37%);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-family: "Fraunces", serif;
+}
+.card-price-discount {
+  font-family: "Fraunces", serif;
+  font-size: 42px;
+}
+.card-price-full {
+  font-size: 18px;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+
+
+@media (max-width: 800px) {
+  .card {
+    flex-direction: column;
+    padding-inline: 20px;
+    padding-block: 30px;
+    height: auto;
+  }
+  .card-image {
+    border-start-start-radius: 15px;
+    border-start-end-radius: 15px;
+    border-end-start-radius: 0;
+    max-height: 290px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .card-description {
+    border-radius: 0;
+    border-end-start-radius: 15px;
+    border-end-end-radius: 15px;
+  }
+}

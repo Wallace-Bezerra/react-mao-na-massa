@@ -1,16 +1,22 @@
-export default function Card(){
+import Button from "../Button/Button";
+import styles from "./Card.module.css"
+console.log(styles);
+export default function Card(props){
+  console.log(props)
   return (
-      <div className="card">
-        <img className="card-image" src="./image-product-desktop.jpg"></img>
-        <div className="card-description">
-          <h3 className="card-category">perfume</h3>
-          <h1 className="card-title">Gabrielle Essence Eau de Parfum</h1>
-          <p className="card-text">A floral, solar and voluptuos interpretation composed by Oliver Polge, Perfumer Creator for the House of CHANEL</p>
-          <div className="card-price">
-            <h1  className="card-price-discount">$149.99</h1>
-            <p  className="card-price-full">$169.99</p>
+      <div className={styles.card}>
+        <img className={styles["card-image"]} src="./image-product-desktop.jpg"></img>
+        <div className={styles["card-description"]}>
+            <h3 className={styles["card-category"]}>{props.categoria}</h3>
+            <h1 className={styles["card-title"]}>{props.titulo}</h1>
+            <p className={styles["card-text"]}>{props.text}</p>
+          <div className={styles["card-price"]}>
+            <h1  className={styles["card-price-discount"]}>{props.preco}</h1>
+            <p  className={styles["card-price-full"]}>{props.desconto}</p>
           </div>
-          <button><img src="./icon-cart.svg"/></button>
+          <Button>
+            <img src="./icon-cart.svg"/>Add to Cart
+          </Button>
         </div>
       </div>
   )
